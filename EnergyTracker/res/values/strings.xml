@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="app_name">EnergyTracker</string>
+    <string name="viewentry"> View Added Entry </string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="addantry"> Add New Entry</string>
+    <string name="deleteantry"> Delete Existing Entry</string>
+    <string name="hello_world"></string>
+    <string name="title_activity_add_entry">AddEntryActivity</string>
+    <string name="description"> Activity Name</string>
+    <string name="startingbatterypres"> % </string>
+    <string name="batterystatus">Enter Battery Status</string>
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name = "entertime"> Enter Elapsed time</string>
+    <string name="H">H</string>
+    <string name="M">M</string>
+    <string name="S">S</string>
+    <string name="converttoseconds"> to Sec</string>
+    <string name="save"> Save </string>
+    <string-array name ="days">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        </string-array>
+        <string name="changedate"> Change Date</string>
+        <string name="medium_text">Medium Text</string>
+        
+
+</resources>

@@ -1,0 +1,188 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+    <ScrollView 
+        android:id="@+id/mainscrollview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+    <RelativeLayout android:id="@+id/linearlayout1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/hello_world"
+        tools:context=".AddEntryActivity" />
+
+    <Button
+        android:id="@+id/changedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
+        android:onClick="showDateDialog"
+        android:text="@string/changedate" />
+
+    <TextView
+        android:id="@+id/displaycurrentdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/changedate"
+        android:layout_toRightOf="@+id/changedate"
+        android:text="@string/medium_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+     <EditText
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/changedate"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/description" >
+
+        <requestFocus />
+    </EditText>
+    <TextView
+        android:id="@+id/batterystatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/description"
+        android:layout_marginTop="20dp"
+        android:text="@string/batterystatus"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <EditText
+        android:id="@+id/startingbattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/batterystatus"
+        android:layout_marginBottom="11dp"
+        android:layout_alignParentLeft="true"
+        android:ems="4"
+        android:hint="@string/start"
+        android:inputType="numberDecimal"
+        android:maxLength="5" />
+
+    <TextView
+        android:id="@+id/startingbatterypres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/startingbattery"
+        android:layout_toRightOf="@+id/startingbattery"
+        android:text="@string/startingbatterypres"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/endingbattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/startingbatterypres"
+        android:layout_toRightOf="@+id/startingbatterypres"
+        android:ems="4"
+        android:hint="@string/end"
+        android:inputType="numberDecimal"
+        android:maxLength="5" />
+
+    <TextView
+        android:id="@+id/endingbatterypres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/startingbattery"
+        android:layout_toRightOf="@+id/endingbattery"
+        android:text="@string/startingbatterypres"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <TextView
+        android:id="@+id/entertime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/startingbattery"
+        android:layout_marginTop="10dp"
+        android:text="@string/entertime"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/consumptionhour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/entertime"
+        android:layout_marginTop="10dp"
+        android:ems="2"
+        android:hint="@string/H"
+        android:inputType="number"
+        android:maxLength="3" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/consumptionminute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entertime"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/consumptionhour"
+        android:ems="2"
+        android:hint="@string/M"
+        android:inputType="number"
+        android:maxLength="2" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/consumptionsecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entertime"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/consumptionminute"
+        android:ems="2"
+        android:hint="@string/S"
+        android:inputType="number"
+        android:maxLength="2" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/seconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entertime"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/consumptionsecond"
+        android:layout_marginLeft="5dp"
+        android:text="@string/medium_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <Button
+        android:id="@+id/converttoseconds"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/consumptionhour"
+        android:layout_toRightOf="@+id/consumptionhour"
+        android:onClick="CalculateSeconds"
+        android:text="@string/converttoseconds" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/converttoseconds"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/converttoseconds"
+        android:text="@string/save"
+        android:onClick="saveRecord" />
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
